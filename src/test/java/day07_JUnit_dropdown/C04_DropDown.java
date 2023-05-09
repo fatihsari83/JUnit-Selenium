@@ -46,7 +46,7 @@ public class C04_DropDown {
         // Elememnt dropdown menü oldugu icin Select class ından olusturacagımız
         // obje ile ilgili methodlari kullanmalıyız
 
-        WebElement dropdownMenuElementi = driver.findElement(By.xpath("//select[@id=‘searchDropdownBox’]"));
+        WebElement dropdownMenuElementi= driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
         Select select= new Select(dropdownMenuElementi);
         int expectedOptionSayisi=45;
         int actualOptionSayisi = select.getOptions().size();
