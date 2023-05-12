@@ -25,11 +25,14 @@ public class TestBase extends utilities.TestBase {
 
 
         //3) ilk iframe'deki (Youtube) play butonuna tıklayınız.
+
         Thread.sleep(5000);
-        driver.switchTo().alert().accept();
-        //WebElement iframeElementi= driver.findElement(By.linkText("https://www.youtube.com/embed/RbSlW8jZFe8"));
-       // driver.switchTo().frame(iframeElementi);
-       // iframeElementi.click();
+        //driver.findElement(By.xpath("//iframe[@width='560']")).click();
+        //driver.switchTo().alert().accept();
+        WebElement iframeElementi= driver.findElement(By.xpath("//iframe[@width='560']"));
+        driver.switchTo().frame(iframeElementi);
+        driver.findElement(By.xpath("//button[@aria-label='Oynat']")).click();
+
                 //driver.findElement(By.linkText("https://www.youtube.com/embed/RbSlW8jZFe8")).click();
 
         //4) ilk iframe'den çıkıp ana sayfaya dönünüz
@@ -40,6 +43,9 @@ public class TestBase extends utilities.TestBase {
 
         //(https://www.guru99.com/live-selenium-project.html) tıklayınız
         Thread.sleep(3000);
+       WebElement ikinciiframeElementi= driver.findElement(By.id("a077aa5e"));
+       driver.switchTo().frame(ikinciiframeElementi);
+
         driver.findElement(By.xpath("//img[@src='Jmeter720.png']")).click();
 
 
