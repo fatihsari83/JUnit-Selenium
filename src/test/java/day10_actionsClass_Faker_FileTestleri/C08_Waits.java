@@ -17,7 +17,7 @@ public class C08_Waits extends TestBase {
     @Test
     public void test01(){
 
-        // implicity wait in rolünü förebilmek icin
+        // implicity wait in rolünü görebilmek icin
         // baslangic ayarlarini bu testte methodunda yapalim
         //3. https://the-internet.herokuapp.com/dynamic_controls adresine gidin.
         //4. Remove butonuna basin.
