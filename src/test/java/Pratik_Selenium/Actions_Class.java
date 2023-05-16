@@ -10,7 +10,7 @@ public class Actions_Class extends TestBase{
 
 
     @Test
-    public void test01(){
+    public void test01() throws InterruptedException {
 
         // 1. "http://webdriveruniversity.com/Actions" sayfasina gidin
 
@@ -28,21 +28,23 @@ public class Actions_Class extends TestBase{
         linkBirElementi.click();
 
         //4. Popup mesajini yazdirin
-
-       // WebElement iFrameyaziElementi= driver.findElement(By.tagName("a"));
+        System.out.println(driver.switchTo().alert().getText());
+        // WebElement iFrameyaziElementi= driver.findElement(By.tagName("a"));
        // Assert.assertTrue(iFrameyaziElementi.isDisplayed());
        // System.out.println(iFrameyaziElementi.getText());
-
+        Thread.sleep(2000);
         //5. Popup'i tamam diyerek kapatin
 
+        driver.switchTo().alert().accept();
+        Thread.sleep(2000);
 
         //6. "Click and hold" kutusuna basili tutun
 
-        //WebElement holdElementi = driver.findElement(By.xpath("(//div[@class='col-lg-12 text-center'])[3]"));
-       // holdElementi.click();
+        WebElement holdElementi = driver.findElement(By.xpath("(//div[@class='col-lg-12 text-center'])[3]"));
+       holdElementi.click();
 
         //7. "Click and hold" kutusunda cikan yaziyi yazdirin
-
+        System.out.println(driver.switchTo().alert().getText());
         //System.out.println(holdElementi.getText());
 
         //8. "Double click me" butonunu cift tiklayin
