@@ -28,6 +28,13 @@ public class C03_ReadExcel {
 
         System.out.println(cell);
 
+        // "C:\Users\FATİH\Downloads\foto (2).png"
+
+        // /src/test/java/day12_WebTables_ExcelOtomasyon/ulkeler.xlsx
+
+        System.out.println(System.getProperty("user.home"));
+        System.out.println(System.getProperty("user.dir"));
+
 
 
     }
