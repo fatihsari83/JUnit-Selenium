@@ -44,10 +44,19 @@ public class Actions_Class extends TestBase{
        holdElementi.click();
 
         //7. "Click and hold" kutusunda cikan yaziyi yazdirin
-        System.out.println(driver.switchTo().alert().getText());
-        //System.out.println(holdElementi.getText());
+        Actions actions1 = new Actions(driver);
+        WebElement clickElementi = driver.findElement(By.xpath("(//div[@class='col-lg-12 text-center'])[3]"));
+        actions1.clickAndHold(clickElementi).perform();
+        System.out.println(clickElementi.getText());
+
 
         //8. "Double click me" butonunu cift tiklayin
+
+        Actions actions2 = new Actions(driver);
+        WebElement doubleClickMeElementi = driver.findElement(By.id("double-click"));
+        actions2.doubleClick(doubleClickMeElementi).perform();
+        Thread.sleep(2000);
+
 
 
     }
